@@ -55,5 +55,5 @@ RSpec.describe Metabase::Endpoint::Card do
         expect(new_card).to be_kind_of(Hash)
       end
     end
-  end  
+  end
 end

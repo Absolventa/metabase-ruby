@@ -46,7 +46,6 @@ RSpec.describe Metabase::Endpoint::Dashboard do
   describe 'add_dashboard_cards', vcr: true do
     context 'success' do
       it 'add a dashboard cards' do
-        card = client.dashboard(dashboard_id)
         card = client.card(card_id)
         add_dashboard_cards = client.add_dashboard_card(dashboard_id, **card)
         expect(add_dashboard_cards).to be_kind_of(Hash)

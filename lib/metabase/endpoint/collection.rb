@@ -35,7 +35,7 @@ module Metabase
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apicollection
-      def new_collection(**params)        
+      def new_collection(**params)
         post('/api/collection', **params)
       end
     end
