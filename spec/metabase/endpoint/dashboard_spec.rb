@@ -6,7 +6,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
   let(:card_id) { 1 }
 
   describe 'dashboards', vcr: true do
-    context 'success' do
+    context 'with success' do
       it 'returns all dashboards' do
         dashboards = client.dashboards
         expect(dashboards).to be_kind_of(Array)
@@ -15,7 +15,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
   end
 
   describe 'dashboard', vcr: true do
-    context 'success' do
+    context 'with success' do
       it 'returns the dashboard' do
         dashboard = client.dashboard(dashboard_id)
         expect(dashboard).to be_kind_of(Hash)
@@ -24,7 +24,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
   end
 
   describe 'new_dashboard', vcr: true do
-    context 'success' do
+    context 'with success' do
       it 'create a new dashboard' do
         dashboard = client.dashboard(dashboard_id)
         new_dashboard = client.new_dashboard(**dashboard)
@@ -34,7 +34,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
   end
 
   describe 'copy_dashboard', vcr: true do
-    context 'success' do
+    context 'with success' do
       it 'create a copy dashboard' do
         dashboard = client.dashboard(dashboard_id)
         copy_dashboard = client.copy_dashboard(dashboard_id, **dashboard)
@@ -44,7 +44,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
   end
 
   describe 'add_dashboard_cards', vcr: true do
-    context 'success' do
+    context 'with success' do
       it 'add a dashboard cards' do
         card = client.card(card_id)
         add_dashboard_cards = client.add_dashboard_card(dashboard_id, **card)
@@ -54,7 +54,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
   end
 
   describe 'update_dashboard_cards', vcr: true do
-    context 'success' do
+    context 'with success' do
       it 'update a dashboard cards' do
         dashboard = client.dashboard(dashboard_id)
         update_dashboard_cards = client.update_dashboard_cards(dashboard_id, **dashboard)
@@ -64,7 +64,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
   end
 
   describe 'delete_dashboard_card', vcr: true do
-    context 'success' do
+    context 'with success' do
       it 'delete a dashboard card' do
         dashboard = client.dashboard(dashboard_id)
         params = { dashcardId: dashboard['ordered_cards'][0]['id'] }

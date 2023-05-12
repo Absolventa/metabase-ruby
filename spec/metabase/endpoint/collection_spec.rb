@@ -5,7 +5,7 @@ RSpec.describe Metabase::Endpoint::Collection do
   let(:collection_id) { 4 }
 
   describe 'collections', vcr: true do
-    context 'success' do
+    context 'with success' do
       it 'returns all collections' do
         collections = client.collections
         expect(collections).to be_kind_of(Array)

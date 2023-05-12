@@ -12,19 +12,19 @@ RSpec.describe Metabase::Endpoint::Session do
       )
     end
 
-    context 'success' do
+    context 'with success' do
       it 'returns a session token' do
         expect(client.login).to match(/[a-z0-9-]{36}/)
       end
     end
 
-    context 'incorrect username or password' do
+    context 'with incorrect username or password' do
       it 'raises error' do
         expect { incorrect_password.login }.to raise_error(Metabase::BadRequest)
       end
     end
 
-    context 'specify username and password' do
+    context 'when specify username and password' do
       it 'uses the username and password' do
         params = { username: 'mb@example.com', password: 'p@ssw0rd' }
         expect(incorrect_password.login(**params)).to match(/[a-z0-9-]{36}/)
@@ -33,7 +33,7 @@ RSpec.describe Metabase::Endpoint::Session do
   end
 
   describe 'logout', vcr: true do
-    context 'success' do
+    context 'with success' do
       include_context 'login'
 
       it 'returns true' do
@@ -41,7 +41,7 @@ RSpec.describe Metabase::Endpoint::Session do
       end
     end
 
-    context 'not logged in' do
+    context 'when not logged in' do
       it 'raises error' do
         expect { client.logout }.to raise_error(Metabase::NotFound)
       end
