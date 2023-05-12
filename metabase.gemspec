@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'amazing_print', '>= 1.2.2'
   spec.add_development_dependency 'bump', '>= 0.10.0'
   spec.add_development_dependency 'bundler', '>= 2.4.13'
-  spec.add_development_dependency 'pry', '>= 0.13.1'
+  spec.add_development_dependency 'pry', '>= 0.14'
   spec.add_development_dependency 'rake', '>= 13.0.3'
   spec.add_development_dependency 'rspec', '>= 3.10.0'
   spec.add_development_dependency 'rubocop', '>= 1.19.0'
