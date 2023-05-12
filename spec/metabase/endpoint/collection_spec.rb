@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Collection do
-  include_context 'login'
+  include_context 'with login'
   let(:collection_id) { 4 }
 
   describe 'collections', vcr: true do

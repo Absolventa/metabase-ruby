@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Metric do
-  include_context 'login'
+  include_context 'with login'
 
   describe 'metrics', vcr: true do
     context 'with success' do

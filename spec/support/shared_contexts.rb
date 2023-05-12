@@ -11,6 +11,6 @@ RSpec.shared_context 'with client' do
 end
 
 RSpec.shared_context 'with login' do
-  include_context 'client'
+  include_context 'with client'
   before { client.login }
 end

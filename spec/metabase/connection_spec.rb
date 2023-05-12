@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Connection do
-  include_context 'client'
+  include_context 'with client'
 
   describe 'get' do
     include_examples 'response handling' do

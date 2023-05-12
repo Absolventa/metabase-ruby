@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Setting do
-  include_context 'login'
+  include_context 'with login'
 
   describe 'settings', vcr: true do
     context 'when success' do

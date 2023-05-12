@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Card do
-  include_context 'login'
+  include_context 'with login'
   let(:card_id) { 1 }
 
   describe 'cards', vcr: true do

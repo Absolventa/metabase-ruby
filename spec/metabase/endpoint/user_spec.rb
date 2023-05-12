@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::User do
-  include_context 'login'
+  include_context 'with login'
 
   describe 'users', vcr: true do
     context 'with success' do

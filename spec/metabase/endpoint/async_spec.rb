@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Async do
-  include_context 'login'
+  include_context 'with login'
 
   describe 'running_jobs', vcr: true do
     context 'with success' do

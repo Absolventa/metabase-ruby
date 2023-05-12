@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Setup do
-  include_context 'login'
+  include_context 'with login'
 
   describe 'admin_checklists', vcr: true do
     context 'with success' do

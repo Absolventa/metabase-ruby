@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Dataset do
-  include_context 'login'
+  include_context 'with login'
 
   let(:query) { '{"type":"native","native":{"query":"SELECT * FROM orders LIMIT 1;"},"database":1}' }
 

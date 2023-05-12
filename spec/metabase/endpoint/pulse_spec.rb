@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Pulse do
-  include_context 'login'
+  include_context 'with login'
 
   describe 'pulses', vcr: true do
     context 'with success' do

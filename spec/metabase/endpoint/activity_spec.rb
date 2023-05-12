@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Activity do
-  include_context 'login'
+  include_context 'with login'
 
   describe 'activities', vcr: true do
     context 'when success' do

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::XRay do
-  include_context 'login'
+  include_context 'with login'
 
   describe 'x_ray_card', vcr: true do
     context 'with success' do

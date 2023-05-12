@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Public do
-  include_context 'client'
+  include_context 'with client'
   let(:card_uuid) { '708a78ec-15c8-405e-b590-de98c6ddfa01' }
 
   describe 'public_card', vcr: true do

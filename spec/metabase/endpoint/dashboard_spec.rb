@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Dashboard do
-  include_context 'login'
+  include_context 'with login'
   let(:dashboard_id) { 1 }
   let(:card_id) { 1 }
 

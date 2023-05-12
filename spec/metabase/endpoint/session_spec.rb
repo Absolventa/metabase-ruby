@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Metabase::Endpoint::Session do
-  include_context 'client'
+  include_context 'with client'
 
   describe 'login', vcr: true do
     let(:incorrect_password) do
@@ -34,7 +34,7 @@ RSpec.describe Metabase::Endpoint::Session do
 
   describe 'logout', vcr: true do
     context 'with success' do
-      include_context 'login'
+      include_context 'with login'
 
       it 'returns true' do
         expect(client.logout).to be(true)
