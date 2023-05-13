@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.shared_examples 'response handling' do
-  let(:host) { 'localhost:3000' }
+  let(:host) { 'localhost:3030' }
   let(:path) { '/' }
 
   context 'with success' do

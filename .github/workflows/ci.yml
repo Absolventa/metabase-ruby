@@ -29,10 +29,9 @@ jobs:
       - name: Rubocop
         run: bundle exec rubocop
 
-      - name: Build and start metabase service
+      - name: Start metabase service
         run: |
-          docker-compose build metabase
-          docker-compose up -d metabase
+          docker-compose up -d
 
       - run: docker-compose ps
 
