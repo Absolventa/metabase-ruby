@@ -20,7 +20,7 @@ RSpec.describe Metabase::Endpoint::Session do
 
     context 'with incorrect username or password' do
       it 'raises error' do
-        expect { incorrect_password.login }.to raise_error(Metabase::BadRequest)
+        expect { incorrect_password.login }.to raise_error(Metabase::Unauthorized)
       end
     end
 

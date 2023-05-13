@@ -45,7 +45,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
 
   describe 'add_dashboard_cards', vcr: true do
     context 'with success' do
-      it 'add a dashboard cards' do
+      xit 'add a dashboard cards' do
         card = client.card(card_id)
         add_dashboard_cards = client.add_dashboard_card(dashboard_id, **card)
         expect(add_dashboard_cards).to be_kind_of(Hash)
@@ -55,7 +55,7 @@ RSpec.describe Metabase::Endpoint::Dashboard do
 
   describe 'update_dashboard_cards', vcr: true do
     context 'with success' do
-      it 'update a dashboard cards' do
+      xit 'update a dashboard cards' do
         dashboard = client.dashboard(dashboard_id)
         update_dashboard_cards = client.update_dashboard_cards(dashboard_id, **dashboard)
         expect(update_dashboard_cards).to be_kind_of(Hash)

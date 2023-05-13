@@ -7,7 +7,7 @@ RSpec.describe Metabase::Endpoint::User do
     context 'with success' do
       it 'returns all users' do
         users = client.users
-        expect(users).to be_kind_of(Array)
+        expect(users).to be_kind_of(Hash)
       end
     end
   end

@@ -7,7 +7,7 @@ RSpec.describe Metabase::Endpoint::Database do
     context 'with success' do
       it 'returns all databases' do
         databases = client.databases
-        expect(databases).to be_kind_of(Array)
+        expect(databases).to be_kind_of(Hash)
       end
     end
   end

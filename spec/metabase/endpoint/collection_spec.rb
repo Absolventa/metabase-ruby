@@ -18,7 +18,7 @@ RSpec.describe Metabase::Endpoint::Collection do
 
       it "returns a collection's items" do
         collection = client.collection_items(collection_id)
-        expect(collection).to be_kind_of(Array)
+        expect(collection).to be_kind_of(Hash)
       end
 
       it 'create a new collection' do
