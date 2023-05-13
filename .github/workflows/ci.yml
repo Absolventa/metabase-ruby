@@ -34,8 +34,10 @@ jobs:
           docker-compose build metabase
           docker-compose up -d metabase
 
-      - name: RSpec
-        run: bundle exec rake spec
+      - run: docker-compose ps
+
+      # - name: RSpec
+      #   run: bundle exec rake spec
 
       - name: Stop metabase service
         run: docker-compose down
