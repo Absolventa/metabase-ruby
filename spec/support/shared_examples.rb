@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.shared_examples 'response handling' do
-  let(:host) { 'metabase:3030' }
+  let(:host) { 'metabase:3000' }
   let(:path) { '/' }
 
   context 'with success' do
