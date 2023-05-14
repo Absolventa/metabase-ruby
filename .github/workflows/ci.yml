@@ -19,7 +19,7 @@ jobs:
       metabase:
         image: metabase/metabase:latest
         ports:
-          - 3030:3000/tcp
+          - 3030:3000
         volumes:
           - ${{ github.workspace }}/.metabase.db:/metabase.db
 
