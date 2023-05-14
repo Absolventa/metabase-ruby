@@ -44,7 +44,7 @@ jobs:
       - run: |
           apt-get update
           apt-get install curl -y
-      - run: curl -I metabase:3030
+      # - run: curl -I metabase:3030
 
       # - run: docker ps
-      # - run: docker network ls
+      - run: docker network ls
