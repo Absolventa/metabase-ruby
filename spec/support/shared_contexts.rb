@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.shared_context 'client' do
+RSpec.shared_context 'with client' do
   let(:client) do
     Metabase::Client.new(
       url: 'http://localhost:3030',
@@ -10,7 +10,7 @@ RSpec.shared_context 'client' do
   end
 end
 
-RSpec.shared_context 'login' do
-  include_context 'client'
+RSpec.shared_context 'with login' do
+  include_context 'with client'
   before { client.login }
 end

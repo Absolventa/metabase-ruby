@@ -1,0 +1,127 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.6.0 (ruby3.2.0)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Sun, 14 May 2023 17:09:17 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - metabase.DEVICE=a6c73392-ce91-421c-ac6e-19f1603d3fb3;HttpOnly;Path=/;Expires=Thu,
+        14 May 2043 17:09:17 GMT;SameSite=Lax
+      - metabase.SESSION=78768360-22b3-479a-bd86-4283463f0ab7;SameSite=Lax;Path=/;HttpOnly
+      - metabase.TIMEOUT=alive;SameSite=Lax;Path=/;Max-Age=1209600
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://accounts.google.com    'sha256-K2AkR/jTLsGV8PyzWha7/ey1iaD9c5jWRYwa++ZlMZc='
+        'sha256-ib2/2v5zC6gGM6Ety7iYgBUvpy/caRX9xV/pzzV7hf0=' 'sha256-isH538cVBUY8IMlGYGbWtBwr+cGqkc4mN6nLcA7lUjE=';
+        child-src 'self' https://accounts.google.com; style-src 'self' 'unsafe-inline'
+        https://accounts.google.com; font-src *; img-src * 'self' data:; connect-src
+        'self' https://accounts.google.com metabase.us10.list-manage.com   ; manifest-src
+        'self';  frame-ancestors 'none';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(11.0.14)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"78768360-22b3-479a-bd86-4283463f0ab7"}'
+  recorded_at: Sun, 14 May 2023 17:09:17 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/database
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.6.0 (ruby3.2.0)
+      X-Metabase-Session:
+      - 78768360-22b3-479a-bd86-4283463f0ab7
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Sun, 14 May 2023 17:09:17 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - metabase.DEVICE=72824c29-6179-4fa6-b7a6-10ff0e45fd11;HttpOnly;Path=/;Expires=Thu,
+        14 May 2043 17:09:17 GMT;SameSite=Lax
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://accounts.google.com    'sha256-K2AkR/jTLsGV8PyzWha7/ey1iaD9c5jWRYwa++ZlMZc='
+        'sha256-ib2/2v5zC6gGM6Ety7iYgBUvpy/caRX9xV/pzzV7hf0=' 'sha256-isH538cVBUY8IMlGYGbWtBwr+cGqkc4mN6nLcA7lUjE=';
+        child-src 'self' https://accounts.google.com; style-src 'self' 'unsafe-inline'
+        https://accounts.google.com; font-src *; img-src * 'self' data:; connect-src
+        'self' https://accounts.google.com metabase.us10.list-manage.com   ; manifest-src
+        'self';  frame-ancestors 'none';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(11.0.14)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"description":"Some example data for you to play around with
+        as you embark on your Metabase journey.","features":["basic-aggregations","temporal-extract","actions/custom","now","standard-deviation-aggregations","date-arithmetics","actions","expression-aggregations","foreign-keys","right-join","left-join","native-parameters","nested-queries","expressions","regex","case-sensitivity-string-filter-options","binning","datetime-diff","inner-join","advanced-math-expressions"],"cache_field_values_schedule":"0
+        0 4 * * ? *","timezone":"UTC","auto_run_queries":true,"metadata_sync_schedule":"0
+        42 * * * ? *","name":"Sample Database","settings":null,"caveats":"You probably
+        don''t want to use this for your business-critical analyses, but hey, it''s
+        your world, we''re just living in it.","creator_id":null,"is_full_sync":true,"updated_at":"2020-06-07T06:28:15.899","native_permissions":"write","cache_ttl":null,"details":{"db":"file:/plugins/sample-database.db;USER=GUEST;PASSWORD=guest"},"is_sample":true,"id":1,"is_on_demand":false,"options":null,"engine":"h2","initial_sync_status":"complete","dbms_version":{"flavor":"H2","version":"2.1.212
+        (2022-04-09)","semantic-version":[2,1]},"refingerprint":null,"created_at":"2020-06-07T05:19:27.175","points_of_interest":"You
+        can find all sorts of different joinable tables ranging from products to people
+        to reviews here."}],"total":1}'
+  recorded_at: Sun, 14 May 2023 17:09:17 GMT
+recorded_with: VCR 6.0.0

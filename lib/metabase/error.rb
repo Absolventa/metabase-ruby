@@ -29,7 +29,7 @@ module Metabase
       return nil if @response.nil?
 
       "#{@response.env.method.upcase} #{@response.env.url}: " \
-      "#{@response.status} - #{@response.body}"
+        "#{@response.status} - #{@response.body}"
     end
   end
 

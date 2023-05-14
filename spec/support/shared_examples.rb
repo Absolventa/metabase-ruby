@@ -4,7 +4,7 @@ RSpec.shared_examples 'response handling' do
   let(:host) { 'localhost:3030' }
   let(:path) { '/' }
 
-  context 'success' do
+  context 'with success' do
     before do
       stub_request(method, host)
         .to_return(status: 200, body: 'OK')
@@ -15,7 +15,7 @@ RSpec.shared_examples 'response handling' do
     end
   end
 
-  context 'server returns 400' do
+  context 'when server returns 400' do
     before do
       stub_request(method, host)
         .to_return(status: 400, body: 'BadRequest')
@@ -28,7 +28,7 @@ RSpec.shared_examples 'response handling' do
     end
   end
 
-  context 'server returns 401' do
+  context 'when server returns 401' do
     before do
       stub_request(method, host)
         .to_return(status: 401, body: 'Unauthorized')
@@ -41,7 +41,7 @@ RSpec.shared_examples 'response handling' do
     end
   end
 
-  context 'server returns 403' do
+  context 'when server returns 403' do
     before do
       stub_request(method, host)
         .to_return(status: 403, body: 'Forbidden')
@@ -54,7 +54,7 @@ RSpec.shared_examples 'response handling' do
     end
   end
 
-  context 'server returns 404' do
+  context 'when server returns 404' do
     before do
       stub_request(method, host)
         .to_return(status: 404, body: 'NotFound')
@@ -67,7 +67,7 @@ RSpec.shared_examples 'response handling' do
     end
   end
 
-  context 'server returns other 4xx' do
+  context 'when server returns other 4xx' do
     before do
       stub_request(method, host)
         .to_return(status: 499, body: 'ClientError')
@@ -80,7 +80,7 @@ RSpec.shared_examples 'response handling' do
     end
   end
 
-  context 'server returns 500' do
+  context 'when server returns 500' do
     before do
       stub_request(method, host)
         .to_return(status: 500, body: 'InternalServerError')
@@ -94,7 +94,7 @@ RSpec.shared_examples 'response handling' do
     end
   end
 
-  context 'server returns 502' do
+  context 'when server returns 502' do
     before do
       stub_request(method, host)
         .to_return(status: 502, body: 'BadGateway')
@@ -107,7 +107,7 @@ RSpec.shared_examples 'response handling' do
     end
   end
 
-  context 'server returns 503' do
+  context 'when server returns 503' do
     before do
       stub_request(method, host)
         .to_return(status: 503, body: 'ServiceUnavailable')
@@ -121,7 +121,7 @@ RSpec.shared_examples 'response handling' do
     end
   end
 
-  context 'server returns other 5xx' do
+  context 'when server returns other 5xx' do
     before do
       stub_request(method, host)
         .to_return(status: 599, body: 'ServerError')

@@ -1,0 +1,121 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.6.0 (ruby3.2.0)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Sun, 14 May 2023 17:09:14 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - metabase.DEVICE=6ac64563-2571-4d37-9d6f-a1344e0be4ee;HttpOnly;Path=/;Expires=Thu,
+        14 May 2043 17:09:14 GMT;SameSite=Lax
+      - metabase.SESSION=007066e1-1945-4a1e-9463-3995e9a36dc5;SameSite=Lax;Path=/;HttpOnly
+      - metabase.TIMEOUT=alive;SameSite=Lax;Path=/;Max-Age=1209600
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://accounts.google.com    'sha256-K2AkR/jTLsGV8PyzWha7/ey1iaD9c5jWRYwa++ZlMZc='
+        'sha256-ib2/2v5zC6gGM6Ety7iYgBUvpy/caRX9xV/pzzV7hf0=' 'sha256-isH538cVBUY8IMlGYGbWtBwr+cGqkc4mN6nLcA7lUjE=';
+        child-src 'self' https://accounts.google.com; style-src 'self' 'unsafe-inline'
+        https://accounts.google.com; font-src *; img-src * 'self' data:; connect-src
+        'self' https://accounts.google.com metabase.us10.list-manage.com   ; manifest-src
+        'self';  frame-ancestors 'none';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(11.0.14)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"007066e1-1945-4a1e-9463-3995e9a36dc5"}'
+  recorded_at: Sun, 14 May 2023 17:09:14 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/user
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.6.0 (ruby3.2.0)
+      X-Metabase-Session:
+      - 007066e1-1945-4a1e-9463-3995e9a36dc5
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Sun, 14 May 2023 17:09:14 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - metabase.DEVICE=4c2589e7-1976-45c6-8877-0a333c66cc17;HttpOnly;Path=/;Expires=Thu,
+        14 May 2043 17:09:14 GMT;SameSite=Lax
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://accounts.google.com    'sha256-K2AkR/jTLsGV8PyzWha7/ey1iaD9c5jWRYwa++ZlMZc='
+        'sha256-ib2/2v5zC6gGM6Ety7iYgBUvpy/caRX9xV/pzzV7hf0=' 'sha256-isH538cVBUY8IMlGYGbWtBwr+cGqkc4mN6nLcA7lUjE=';
+        child-src 'self' https://accounts.google.com; style-src 'self' 'unsafe-inline'
+        https://accounts.google.com; font-src *; img-src * 'self' data:; connect-src
+        'self' https://accounts.google.com metabase.us10.list-manage.com   ; manifest-src
+        'self';  frame-ancestors 'none';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(11.0.14)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"email":"mb@example.com","ldap_auth":false,"first_name":"Admin","locale":null,"last_login":"2023-05-14T17:09:14.413293","is_active":true,"is_qbnewb":false,"updated_at":"2023-05-14T17:09:14.413293","group_ids":[1,2],"is_superuser":true,"login_attributes":null,"id":1,"last_name":"User","date_joined":"2020-06-07T05:20:41.859","sso_source":null,"personal_collection_id":1,"common_name":"Admin
+        User","google_auth":false},{"email":"mb1@example.com","ldap_auth":false,"first_name":"Sample","locale":null,"last_login":"2020-06-07T05:52:12.144","is_active":true,"is_qbnewb":true,"updated_at":"2020-06-07T05:52:12.144","group_ids":[1,4],"is_superuser":false,"login_attributes":null,"id":2,"last_name":"User","date_joined":"2020-06-07T05:50:07.112","sso_source":null,"personal_collection_id":8,"common_name":"Sample
+        User","google_auth":false}],"total":2,"limit":null,"offset":null}'
+  recorded_at: Sun, 14 May 2023 17:09:14 GMT
+recorded_with: VCR 6.0.0
