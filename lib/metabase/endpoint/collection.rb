@@ -24,7 +24,7 @@ module Metabase
       # Fetch a collection's items.
       #
       # @param params [Hash] Query string
-      # @return [Array<Hash>] Parsed response JSON
+      # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apicollectioniditems
       def collection_items(collection_id, **params)
         get("/api/collection/#{collection_id}/items", **params)
@@ -35,7 +35,7 @@ module Metabase
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apicollection
-      def new_collection(**params)        
+      def new_collection(**params)
         post('/api/collection', **params)
       end
     end
