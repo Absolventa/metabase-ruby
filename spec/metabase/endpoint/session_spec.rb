@@ -6,7 +6,7 @@ RSpec.describe Metabase::Endpoint::Session do
   describe 'login', vcr: true do
     let(:incorrect_password) do
       Metabase::Client.new(
-        url: 'http://localhost:3030',
+        url: 'http://metabase:3030',
         username: 'mb@example.com',
         password: 'incorrect'
       )
