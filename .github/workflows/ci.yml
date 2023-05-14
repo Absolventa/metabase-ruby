@@ -40,3 +40,4 @@ jobs:
       #   run: bundle exec rake spec
 
       - run: nc -vz localhost 3030
+      - run: curl -I localhost:3030
