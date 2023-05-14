@@ -1,0 +1,130 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3030/api/session
+    body:
+      encoding: UTF-8
+      string: '{"username":"mb@example.com","password":"p@ssw0rd"}'
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.6.0 (ruby3.2.0)
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Sun, 14 May 2023 15:09:56 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - metabase.DEVICE=bc3f09b7-2eb8-49cc-a91e-01cfb0076907;HttpOnly;Path=/;Expires=Thu,
+        14 May 2043 15:09:56 GMT;SameSite=Lax
+      - metabase.SESSION=bb43f6da-67d5-44a7-ae44-ce4c3e29b397;SameSite=Lax;Path=/;HttpOnly
+      - metabase.TIMEOUT=alive;SameSite=Lax;Path=/;Max-Age=1209600
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://accounts.google.com    'sha256-K2AkR/jTLsGV8PyzWha7/ey1iaD9c5jWRYwa++ZlMZc='
+        'sha256-ib2/2v5zC6gGM6Ety7iYgBUvpy/caRX9xV/pzzV7hf0=' 'sha256-isH538cVBUY8IMlGYGbWtBwr+cGqkc4mN6nLcA7lUjE=';
+        child-src 'self' https://accounts.google.com; style-src 'self' 'unsafe-inline'
+        https://accounts.google.com; font-src *; img-src * 'self' data:; connect-src
+        'self' https://accounts.google.com metabase.us10.list-manage.com   ; manifest-src
+        'self';  frame-ancestors 'none';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(11.0.14)
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"bb43f6da-67d5-44a7-ae44-ce4c3e29b397"}'
+  recorded_at: Sun, 14 May 2023 15:09:56 GMT
+- request:
+    method: get
+    uri: http://localhost:3030/api/collection
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - MetabaseRuby/0.6.0 (ruby3.2.0)
+      X-Metabase-Session:
+      - bb43f6da-67d5-44a7-ae44-ce4c3e29b397
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      Last-Modified:
+      - Sun, 14 May 2023 15:09:56 GMT
+      Strict-Transport-Security:
+      - max-age=31536000
+      Set-Cookie:
+      - metabase.DEVICE=8f98cc18-38e3-47bb-ad6f-3d1424e8e784;HttpOnly;Path=/;Expires=Thu,
+        14 May 2043 15:09:56 GMT;SameSite=Lax
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate, proxy-revalidate
+      X-Content-Type-Options:
+      - nosniff
+      Content-Security-Policy:
+      - default-src 'none'; script-src 'self' 'unsafe-eval' https://maps.google.com
+        https://accounts.google.com    'sha256-K2AkR/jTLsGV8PyzWha7/ey1iaD9c5jWRYwa++ZlMZc='
+        'sha256-ib2/2v5zC6gGM6Ety7iYgBUvpy/caRX9xV/pzzV7hf0=' 'sha256-isH538cVBUY8IMlGYGbWtBwr+cGqkc4mN6nLcA7lUjE=';
+        child-src 'self' https://accounts.google.com; style-src 'self' 'unsafe-inline'
+        https://accounts.google.com; font-src *; img-src * 'self' data:; connect-src
+        'self' https://accounts.google.com metabase.us10.list-manage.com   ; manifest-src
+        'self';  frame-ancestors 'none';
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Tue, 03 Jul 2001 06:00:00 GMT
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - Jetty(11.0.14)
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"authority_level":null,"name":"Our analytics","id":"root","parent_id":null,"effective_location":null,"effective_ancestors":[],"can_write":true},{"authority_level":null,"description":null,"archived":false,"slug":"admin_user_s_personal_collection","color":"#31698A","can_write":true,"name":"Admin
+        User''s Personal Collection","personal_owner_id":1,"id":1,"entity_id":null,"location":"/","namespace":null,"created_at":"2020-06-07T05:20:41.859Z"},{"authority_level":null,"description":null,"archived":false,"slug":"metabaseruby","color":"#509EE3","can_write":true,"name":"MetabaseRuby","personal_owner_id":null,"id":2,"entity_id":null,"location":"/","namespace":null,"created_at":"2020-06-07T05:36:28.806Z"},{"authority_level":null,"description":null,"archived":false,"slug":"new_organization","color":"#509EE3","can_write":true,"name":"New
+        Organization","personal_owner_id":null,"id":9,"entity_id":"6ajd5S7OGyZvBF70hr_yU","location":"/","namespace":null,"created_at":"2023-05-14T13:48:08.702625Z"},{"authority_level":null,"description":"Automatically
+        generated cards.","archived":false,"slug":"orders_dashboard","color":"#A989C5","can_write":true,"name":"Orders
+        Dashboard","personal_owner_id":null,"id":5,"entity_id":null,"location":"/","namespace":null,"created_at":"2020-06-07T05:43:45.637Z"},{"authority_level":null,"description":"Automatically
+        generated cards.","archived":false,"slug":"people_dashboard","color":"#9CC177","can_write":true,"name":"People
+        Dashboard","personal_owner_id":null,"id":6,"entity_id":null,"location":"/","namespace":null,"created_at":"2020-06-07T05:44:27.387Z"},{"authority_level":null,"description":"Automatically
+        generated cards.","archived":false,"slug":"products_dashboard","color":"#F1B556","can_write":true,"name":"Products
+        Dashboard","personal_owner_id":null,"id":4,"entity_id":null,"location":"/","namespace":null,"created_at":"2020-06-07T05:41:54.97Z"},{"authority_level":null,"description":"Automatically
+        generated cards.","archived":false,"slug":"reviews_dashboard","color":"#A989C5","can_write":true,"name":"Reviews
+        Dashboard","personal_owner_id":null,"id":7,"entity_id":null,"location":"/","namespace":null,"created_at":"2020-06-07T05:44:34.108Z"},{"authority_level":null,"description":null,"archived":false,"slug":"sample_user_s_personal_collection","color":"#31698A","can_write":true,"name":"Sample
+        User''s Personal Collection","personal_owner_id":2,"id":8,"entity_id":null,"location":"/","namespace":null,"created_at":"2020-06-07T05:50:07.112Z"}]'
+  recorded_at: Sun, 14 May 2023 15:09:57 GMT
+recorded_with: VCR 6.0.0

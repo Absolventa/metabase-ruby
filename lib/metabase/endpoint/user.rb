@@ -6,7 +6,7 @@ module Metabase
       # Fetch all users.
       #
       # @param params [Hash] Query string
-      # @return [Array<Hash>] Parsed response JSON
+      # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#get-apiuser
       def users(**params)
         get('/api/user', **params)
