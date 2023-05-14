@@ -16,6 +16,13 @@ jobs:
           - '3.1'
           - '3.0'
 
+    container:
+      image: metabase/metabase:latest
+      ports:
+        - 3030:3000
+      volumes:
+        - ${{ github.workspace }}/.metabase.db:/metabase.db
+
     steps:
       - uses: actions/checkout@v3
 
@@ -29,14 +36,5 @@ jobs:
       - name: Rubocop
         run: bundle exec rubocop
 
-      - name: Start metabase service
-        run: |
-          docker-compose up -d
-
-      - run: docker-compose ps
-
       - name: RSpec
         run: bundle exec rake spec
-
-      - name: Stop metabase service
-        run: docker-compose down
