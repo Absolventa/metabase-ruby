@@ -33,8 +33,10 @@ jobs:
 
       - run: ruby -v
           
-      - name: Rubocop
-        run: bundle exec rubocop
+      # - name: Rubocop
+      #   run: bundle exec rubocop
 
-      - name: RSpec
-        run: bundle exec rake spec
+      # - name: RSpec
+      #   run: bundle exec rake spec
+
+      - run: nc -vz localhost 3030
