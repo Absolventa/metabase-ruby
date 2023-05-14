@@ -3,7 +3,7 @@
 RSpec.shared_context 'with client' do
   let(:client) do
     Metabase::Client.new(
-      url: 'http://metabase:3030',
+      url: 'http://127.0.0.1:3030',
       username: 'mb@example.com',
       password: 'p@ssw0rd'
     )
