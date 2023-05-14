@@ -9,42 +9,25 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: ubuntu
-    # strategy:
-    #   matrix:
-    #     ruby:
-    #       - '3.2'
-    #       - '3.1'
-    #       - '3.0'
-    services:
-      metabase:
-        image: metabase/metabase:latest
-        ports:
-          - 3030:3000
-        volumes:
-          - ${{ github.workspace }}/.metabase.db:/metabase.db
+    strategy:
+      matrix:
+        ruby:
+          - '3.2'
+          - '3.1'
+          - '3.0'
 
     steps:
-      # - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      # - uses: ruby/setup-ruby@v1
-      #   with:
-      #     ruby-version: ${{ matrix.ruby }}
-      #     bundler-cache: true
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
 
-      # - run: ruby -v
-          
-      # - name: Rubocop
-      #   run: bundle exec rubocop
+      - run: ruby -v
 
-      # - name: RSpec
-      #   run: bundle exec rake spec
+      - name: Rubocop
+        run: bundle exec rubocop
 
-      # - run: nc -vz localhost 3030
-      - run: |
-          apt-get update
-          apt-get install curl -y
-          curl -I localhost:3030
-
-      # - run: docker ps
-      # - run: docker network ls
+      - name: RSpec
+        run: bundle exec rake spec
