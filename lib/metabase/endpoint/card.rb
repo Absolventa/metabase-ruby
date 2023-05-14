@@ -48,9 +48,9 @@ module Metabase
       # @param params [Hash] Query string
       # @return [Hash] Parsed response JSON
       # @see https://github.com/metabase/metabase/blob/master/docs/api-documentation.md#post-apicard
-      def new_card(**params)        
+      def new_card(**params)
         post('/api/card', **params)
-      end      
+      end
     end
   end
 end
